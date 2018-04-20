@@ -1,0 +1,4 @@
+D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.Common\bin\Release\CZBK.ItcastProject.Common.dll
+D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.Common\bin\Release\CZBK.ItcastProject.Common.pdb
+D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.Common\obj\Release\CZBK.ItcastProject.Common.dll
+D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.Common\obj\Release\CZBK.ItcastProject.Common.pdb

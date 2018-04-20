@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="tableStyle.css" rel="stylesheet" />
+    <script src="../js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript">
+        //$(function () {
+        //    $(".delete").click(function () {
+        //        if (!confirm("adsfadsf")) {
+        //            return false;
+        //        }
+        //    })
+        //})
+        function rowDelete(username, id) {
+            id = parseInt(id);
+            if (confirm("are you sure delete it:\u000d\u000d" + username)) {
+                $(location).attr('href', 'DeleteDetail.ashx?ID=' + id)
+            }
+        }
+    </script>
+</head>
+<body>
+    <a href="AddUserInfo.html">Create Customer</a>
+    <table>
+        <tr><th>ID</th><th>UserNmae</th><th>UserPass</th><th>Email</th><th>RegTime</th><th>Detail</th><th>Delete</th><th>Edit</th></tr>
+        @tbaby
+    </table>
+</body>
+</html>

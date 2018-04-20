@@ -1,0 +1,9 @@
+D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.DAL\bin\Debug\CZBK.ItcastProject.DAL.dll
+D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.DAL\bin\Debug\CZBK.ItcastProject.DAL.pdb
+D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.DAL\obj\Debug\CZBK.ItcastProject.DAL.csprojResolveAssemblyReference.cache
+D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.DAL\obj\Debug\CZBK.ItcastProject.DAL.dll
+D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.DAL\obj\Debug\CZBK.ItcastProject.DAL.pdb
+D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.DAL\bin\Debug\CZBK.ItcastProject.Common.dll
+D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.DAL\bin\Debug\CZBK.ItcastProject.Model.dll
+D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.DAL\bin\Debug\CZBK.ItcastProject.Common.pdb
+D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.DAL\bin\Debug\CZBK.ItcastProject.Model.pdb

@@ -1,0 +1,11 @@
+D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.BLL\bin\Release\CZBK.ItcastProject.BLL.dll
+D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.BLL\bin\Release\CZBK.ItcastProject.BLL.pdb
+D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.BLL\bin\Release\CZBK.ItcastProject.DAL.dll
+D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.BLL\bin\Release\CZBK.ItcastProject.Model.dll
+D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.BLL\bin\Release\CZBK.ItcastProject.Common.dll
+D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.BLL\bin\Release\CZBK.ItcastProject.DAL.pdb
+D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.BLL\bin\Release\CZBK.ItcastProject.Model.pdb
+D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.BLL\bin\Release\CZBK.ItcastProject.Common.pdb
+D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.BLL\obj\Release\CZBK.ItcastProject.BLL.csprojResolveAssemblyReference.cache
+D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.BLL\obj\Release\CZBK.ItcastProject.BLL.dll
+D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.BLL\obj\Release\CZBK.ItcastProject.BLL.pdb

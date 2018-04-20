@@ -1,0 +1,4 @@
+D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.Model\bin\Release\CZBK.ItcastProject.Model.dll
+D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.Model\bin\Release\CZBK.ItcastProject.Model.pdb
+D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.Model\obj\Release\CZBK.ItcastProject.Model.dll
+D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.Model\obj\Release\CZBK.ItcastProject.Model.pdb
