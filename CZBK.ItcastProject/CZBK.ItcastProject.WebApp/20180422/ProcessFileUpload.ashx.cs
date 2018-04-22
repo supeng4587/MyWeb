@@ -28,7 +28,7 @@ namespace CZBK.ItcastProject.WebApp._20180422
                 if (exists)//改成一个数组判断图片格式
                 {
                     file.SaveAs(context.Request.MapPath("/ImageUpload/"+fileName));
-                    context.Response.Write("<html><body><img src='/ImageUpload/" + fileName + "'></body></html>");
+                    context.Response.Write("<html><body><img src='/ImageUpload/" + fileName + "'></body></html>");//展示
                 }
                 else
                 {
