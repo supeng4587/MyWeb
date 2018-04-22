@@ -23,10 +23,17 @@ namespace CZBK.ItcastProject.WebApp
                 BLL.UserInfoService userInfoService = new UserInfoService();
                 UserInfo userInfo = new UserInfo();
                 userInfo = userInfoService.GetList(id);
-                string filePath = context.Request.MapPath("ShowUserDetail.html");
-                string fileContent = File.ReadAllText(filePath);
-                fileContent = fileContent.Replace("$ID", userInfo.ID.ToString()).Replace("$UserName", userInfo.UserName).Replace("$UserPass", userInfo.UserPass).Replace("$Email", userInfo.Email).Replace("$RegTime", userInfo.RegTime.ToString());
-                context.Response.Write(fileContent);
+                if (userInfo != null)
+                {
+                    string filePath = context.Request.MapPath("ShowUserDetail.html");
+                    string fileContent = File.ReadAllText(filePath);
+                    fileContent = fileContent.Replace("$ID", userInfo.ID.ToString()).Replace("$UserName", userInfo.UserName).Replace("$UserPass", userInfo.UserPass).Replace("$Email", userInfo.Email).Replace("$RegTime", userInfo.RegTime.ToString());
+                    context.Response.Write(fileContent);
+                }
+                else
+                {
+                    context.Response.Redirect("Error.html");
+                }
             }
             else
             {

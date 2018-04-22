@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -94,6 +95,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="20180422\FileUpload.html" />
     <Content Include="AddUserInfo.html" />
     <Content Include="CSS\tableStyle.css" />
     <Content Include="Error.html" />
@@ -111,6 +113,7 @@
     <Content Include="ShowUserDetail.ashx" />
     <Content Include="UpdateUserDetail.ashx" />
     <Content Include="UpdateUserInfo.ashx" />
+    <Content Include="20180422\ProcessFileUpload.ashx" />
     <None Include="Properties\PublishProfiles\MyWeb.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -126,6 +129,9 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="20180422\ProcessFileUpload.ashx.cs">
+      <DependentUpon>ProcessFileUpload.ashx</DependentUpon>
+    </Compile>
     <Compile Include="AddUser.ashx.cs">
       <DependentUpon>AddUser.ashx</DependentUpon>
     </Compile>
@@ -156,7 +162,9 @@
       <Name>CZBK.ItcastProject.Model</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="ImageUpload\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
