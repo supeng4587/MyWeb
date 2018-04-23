@@ -95,6 +95,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="20180422\DrawWaterMark.html" />
     <Content Include="20180422\FileUpload.html" />
     <Content Include="AddUserInfo.html" />
     <Content Include="CSS\tableStyle.css" />
@@ -114,6 +115,8 @@
     <Content Include="UpdateUserDetail.ashx" />
     <Content Include="UpdateUserInfo.ashx" />
     <Content Include="20180422\ProcessFileUpload.ashx" />
+    <Content Include="MakeImage.ashx" />
+    <Content Include="20180422\DrawWaterMark.ashx" />
     <None Include="Properties\PublishProfiles\MyWeb.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -129,6 +132,9 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="20180422\DrawWaterMark.ashx.cs">
+      <DependentUpon>DrawWaterMark.ashx</DependentUpon>
+    </Compile>
     <Compile Include="20180422\ProcessFileUpload.ashx.cs">
       <DependentUpon>ProcessFileUpload.ashx</DependentUpon>
     </Compile>
@@ -137,6 +143,9 @@
     </Compile>
     <Compile Include="Deleteuser.ashx.cs">
       <DependentUpon>Deleteuser.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="MakeImage.ashx.cs">
+      <DependentUpon>MakeImage.ashx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShowUserDetail.ashx.cs">
