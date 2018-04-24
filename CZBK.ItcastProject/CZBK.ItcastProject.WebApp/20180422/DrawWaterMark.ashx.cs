@@ -41,7 +41,7 @@ namespace CZBK.ItcastProject.WebApp._20180422
                             }
 
                             map.Save(context.Request.MapPath(dir + guidName + ".jpg"), System.Drawing.Imaging.ImageFormat.Jpeg);
-                            context.Response.Write("<html><body><a href='#'>" + dir + guidName + ".jpg" + "</a><img src='" + dir + guidName + ".jpg" + "'</body></html>");
+                            context.Response.Write("<html><body><a href='#'>" + dir + guidName + ".jpg" + "</a></br><img src='" + dir + guidName + ".jpg" + "'</body></html>");
                         }
                     }
                 }

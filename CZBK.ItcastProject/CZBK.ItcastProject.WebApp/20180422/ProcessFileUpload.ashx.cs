@@ -63,7 +63,7 @@ namespace CZBK.ItcastProject.WebApp._20180422
                         }
                     }
 
-                    context.Response.Write("<html><body><a href=#>" + dir + waterGuidName + fileExt + "</a><img src='" + dir + waterGuidName + fileExt + "'></body></html>");
+                    context.Response.Write("<html><body><a href=#>" + dir + waterGuidName + fileExt + "</a></br><img src='" + dir + waterGuidName + fileExt + "'></body></html>");
                 }
                 else
                 {

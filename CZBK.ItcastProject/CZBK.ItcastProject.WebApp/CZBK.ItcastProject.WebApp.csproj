@@ -97,6 +97,7 @@
   <ItemGroup>
     <Content Include="20180422\DrawWaterMark.html" />
     <Content Include="20180422\FileUpload.html" />
+    <Content Include="20180424\Thumb.html" />
     <Content Include="AddUserInfo.html" />
     <Content Include="CSS\tableStyle.css" />
     <Content Include="Error.html" />
@@ -117,6 +118,7 @@
     <Content Include="20180422\ProcessFileUpload.ashx" />
     <Content Include="MakeImage.ashx" />
     <Content Include="20180422\DrawWaterMark.ashx" />
+    <Content Include="20180424\Thumb.ashx" />
     <None Include="Properties\PublishProfiles\MyWeb.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -137,6 +139,9 @@
     </Compile>
     <Compile Include="20180422\ProcessFileUpload.ashx.cs">
       <DependentUpon>ProcessFileUpload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="20180424\Thumb.ashx.cs">
+      <DependentUpon>Thumb.ashx</DependentUpon>
     </Compile>
     <Compile Include="AddUser.ashx.cs">
       <DependentUpon>AddUser.ashx</DependentUpon>
