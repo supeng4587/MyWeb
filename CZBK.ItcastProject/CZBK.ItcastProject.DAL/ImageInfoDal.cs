@@ -46,14 +46,16 @@ namespace CZBK.ItcastProject.DAL
         /// <returns>List<ImageInfo></returns>
         public List<ImageInfo> GetImageInfo()
         {
-            string sql = "SELECT ID,OriginalName,Path,GuidName,Extension,Size,CreateTime FROM dbo.ImageInfo ORDER BY ID";
+            string sql = "SELECT ID,OriginalName,Path,GuidName,Extension,ThumbName,Size,CreateTime FROM dbo.ImageInfo ORDER BY ID";
             DataTable dt = SqlHelper.GetDataTable(sql, CommandType.Text);
             List<ImageInfo> list = null;
             if (dt.Rows.Count > 0)
             {
+                list = new List<ImageInfo>();
+                ImageInfo imageInfo = null;
                 foreach (DataRow item in dt.Rows)
                 {
-                    ImageInfo imageInfo = new ImageInfo();
+                    imageInfo = new ImageInfo();
                     LoadImageInfo(imageInfo, item);
                     list.Add(imageInfo);
                 }
@@ -69,7 +71,7 @@ namespace CZBK.ItcastProject.DAL
         /// <returns>imageInfo</returns>
         public ImageInfo GetImageInfo(int id)
         {
-            string sql = "SELECT ID,OriginalName,Path,GuidName,Extension,Size,CreateTime FROM dbo.ImageInfo WHERE ID=@id";
+            string sql = "SELECT ID,OriginalName,Path,GuidName,Extension,Size,CreateTime,ThumbName FROM dbo.ImageInfo WHERE ID=@id";
             SqlParameter par = new SqlParameter("@id", SqlDbType.Int) ;
             par.Value = id;
             ImageInfo imageInfo = new ImageInfo();
@@ -178,10 +180,10 @@ namespace CZBK.ItcastProject.DAL
             imageInfo.ID = int.Parse(item["ID"].ToString());
             imageInfo.OriginalName = item["OriginalName"] != DBNull.Value ? item["OriginalName"].ToString() : string.Empty;
             imageInfo.Path = item["Path"] != DBNull.Value ? item["Path"].ToString() : string.Empty;
-            imageInfo.Path = item["GuidName"] != DBNull.Value ? item["GuidName"].ToString() : string.Empty;
-            imageInfo.Path = item["Extension"] != DBNull.Value ? item["Extension"].ToString() : string.Empty;
+            imageInfo.GuidName = item["GuidName"] != DBNull.Value ? item["GuidName"].ToString() : string.Empty;
+            imageInfo.Extension = item["Extension"] != DBNull.Value ? item["Extension"].ToString() : string.Empty;
             imageInfo.ThumbName = item["ThumbName"] != DBNull.Value ? item["ThumbName"].ToString() : string.Empty;
-            imageInfo.Path = item["Size"] != DBNull.Value ? item["Size"].ToString() : string.Empty;
+            imageInfo.Size = item["Size"] != DBNull.Value ? item["Size"].ToString() : string.Empty;
             imageInfo.CreateTime = item["CreateTime"] != DBNull.Value ? DateTime.Parse(item["CreateTime"].ToString()) : DateTime.MinValue;
         }
     }

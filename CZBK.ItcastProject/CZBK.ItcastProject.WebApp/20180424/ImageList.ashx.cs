@@ -24,12 +24,12 @@ namespace CZBK.ItcastProject.WebApp._20180424
 
             BLL.ImageInfoService imageInfoService = new BLL.ImageInfoService();
             List<ImageInfo> list = imageInfoService.read();
-            if(list != null)
+            if (list != null)
             {
-                StringBuilder sb = null;
+                StringBuilder sb = new StringBuilder();
                 foreach (ImageInfo item in list)
                 {
-                    sb.AppendFormat("<tr><td>{0}</td><td>{1}</td><td>{2}</td><td>{3}</td><td>{4}</td><td>{5}</td><td>{6}</td><td>{7}</td><td></td><td></td><td></td><td></td></tr>", item.ID, item.OriginalName, item.Path, item.GuidName, item.Extension, item.Size, item.CreateTime);
+                    sb.AppendFormat("<tr><td>{0}</td><td>{1}</td><td>{2}</td><td>{3}</td><td>{4}</td><td>{5}</td><td>{6}</td><td>{7}</td><td><a href='{2}{3}{4}'>{1}</a></td><td><a href='{2}{5}{4}'>thumb</a></td><td></td><td></td><td></td></tr>", item.ID, item.OriginalName, item.Path, item.GuidName, item.Extension, item.ThumbName, item.Size, item.CreateTime);
                 }
                 htmlFileContent = htmlFileContent.Replace("@toBody", sb.ToString());
             }
@@ -37,7 +37,7 @@ namespace CZBK.ItcastProject.WebApp._20180424
             {
                 htmlFileContent = htmlFileContent.Replace("@toBody", "");
             }
-            
+
 
             context.Response.Write(htmlFileContent);
         }
