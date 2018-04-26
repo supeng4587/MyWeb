@@ -29,7 +29,7 @@ namespace CZBK.ItcastProject.WebApp._20180424
                 StringBuilder sb = new StringBuilder();
                 foreach (ImageInfo item in list)
                 {
-                    sb.AppendFormat("<tr><td>{0}</td><td>{1}</td><td>{2}</td><td>{3}</td><td>{4}</td><td>{5}</td><td>{6}</td><td>{7}</td><td><a href='{2}{3}{4}'>{1}</a></td><td><a href='{2}{5}{4}'>thumb</a></td><td></td><td></td><td></td></tr>", item.ID, item.OriginalName, item.Path, item.GuidName, item.Extension, item.ThumbName, item.Size, item.CreateTime);
+                    sb.AppendFormat("<tr><td>{0}</td><td>{1}</td><td>{2}</td><td>{3}</td><td>{4}</td><td>{5}</td><td>{6}</td><td>{7}</td><td><a href='{2}{3}{4}'>{1}</a></td><td><a href='{2}{5}{4}'>thumb</a></td><td><a href='ImageDetail.ashx?ID={0}'>Detail</a></td><td><a href='ImageUpdate.ashx?ID={0}'>Update</a></td><td></td></tr>", item.ID, item.OriginalName, item.Path, item.GuidName, item.Extension, item.ThumbName, item.Size, item.CreateTime);
                 }
                 htmlFileContent = htmlFileContent.Replace("@toBody", sb.ToString());
             }

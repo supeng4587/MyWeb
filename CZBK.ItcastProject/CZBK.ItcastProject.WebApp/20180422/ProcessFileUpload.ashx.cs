@@ -51,6 +51,12 @@ namespace CZBK.ItcastProject.WebApp._20180422
                             //为画布创建画笔
                             using (Graphics g = Graphics.FromImage(map))
                             {
+                                //设置高质量插值法
+                                g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.High;
+
+                                //设置高质量,低速度呈现平滑程度
+                                g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+
                                 g.DrawImage(img,0,0, img.Width, img.Height);
                                 int imgWidth = img.Width;
                                 int imgHeight = img.Height;

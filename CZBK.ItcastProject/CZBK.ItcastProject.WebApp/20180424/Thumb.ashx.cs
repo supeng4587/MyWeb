@@ -17,7 +17,6 @@ namespace CZBK.ItcastProject.WebApp._20180424
         public void ProcessRequest(HttpContext context)
         {
             context.Response.ContentType = "text/html";
-            //0f8fc701-988b-4fae-897d-aa86b958ac64.jpg
             //创建缩略图，定义一个比较小的画布，将图片画到画布上再保存
             HttpPostedFile file = context.Request.Files[0];
             if (file.ContentLength > 0)
@@ -29,20 +28,31 @@ namespace CZBK.ItcastProject.WebApp._20180424
                 if (exist)
                 {
                     string guidPath;
-                    using (Bitmap map = new Bitmap(150, 150))
-                    {
-                        using (Image img = Image.FromStream(file.InputStream))
-                        {
-                            using (Graphics g = Graphics.FromImage(map))
-                            {
-                                g.DrawImage(img, 0, 0, map.Width, map.Height);
-                                string guidName = Guid.NewGuid().ToString();
-                                guidPath = "/ImageUpload/2018/4/24/" + guidName + ".jpg";
-                                map.Save(context.Request.MapPath(guidPath), System.Drawing.Imaging.ImageFormat.Jpeg);
-                            }
-                        }
-                    }
-                    context.Response.Write("<html><body><a href='#'>" + guidPath + "</a></br><img src=" + guidPath + "></body></html>");
+                    string guidName = Guid.NewGuid().ToString();
+                    guidPath = "/ImageUpload/2018/4/24/" + guidName + ".jpg";
+                    string thumbPath = "/ImageUpload/2018/4/24/thumb" + guidName + ".jpg";
+                    string originalMapPath = context.Request.MapPath(guidPath);
+                    string thumbMapPath = context.Request.MapPath(thumbPath);
+                    #region 未加入缩放
+                    //using (Bitmap map = new Bitmap(150, 150))
+                    //{
+                    //    using (Image img = Image.FromStream(file.InputStream))
+                    //    {
+                    //        using (Graphics g = Graphics.FromImage(map))
+                    //        {
+                    //            g.DrawImage(img, 0, 0, map.Width, map.Height);
+
+                    //            map.Save(context.Request.MapPath(guidPath), System.Drawing.Imaging.ImageFormat.Jpeg);
+                    //        }
+                    //    }
+                    //}
+                    #endregion
+
+                    file.SaveAs(originalMapPath);
+
+                    Common.ImageClass.MakeThumbnail(originalMapPath, thumbMapPath, 200, 500, "W");
+
+                    context.Response.Write("<html><body><a href='#'>" + thumbPath + "</a></br><img src=" + thumbPath + "></body></html>");
                 }
                 else
                 {

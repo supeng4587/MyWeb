@@ -99,6 +99,7 @@
     <Content Include="20180422\FileUpload.html" />
     <Content Include="20180424\ImageDetail.html" />
     <Content Include="20180424\ImageList.html" />
+    <Content Include="20180424\ImageUpdate.html" />
     <Content Include="20180424\ImageUpLoad.html" />
     <Content Include="20180424\Thumb.html" />
     <Content Include="AddUserInfo.html" />
@@ -125,6 +126,7 @@
     <Content Include="20180424\ImageList.ashx" />
     <Content Include="20180424\ImageUpLoad.ashx" />
     <Content Include="20180424\ImageDetail.ashx" />
+    <Content Include="20180424\ImageUpdate.ashx" />
     <None Include="Properties\PublishProfiles\MyWeb.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -151,6 +153,9 @@
     </Compile>
     <Compile Include="20180424\ImageList.ashx.cs">
       <DependentUpon>ImageList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="20180424\ImageUpdate.ashx.cs">
+      <DependentUpon>ImageUpdate.ashx</DependentUpon>
     </Compile>
     <Compile Include="20180424\ImageUpLoad.ashx.cs">
       <DependentUpon>ImageUpLoad.ashx</DependentUpon>
@@ -186,12 +191,17 @@
       <Project>{7ab820f3-d18c-44aa-a6fb-393244fc2bf3}</Project>
       <Name>CZBK.ItcastProject.BLL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CZBK.ItcastProject.Common\CZBK.ItcastProject.Common.csproj">
+      <Project>{7a25b712-5869-4b26-bb41-94c2c8b4f93d}</Project>
+      <Name>CZBK.ItcastProject.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CZBK.ItcastProject.Model\CZBK.ItcastProject.Model.csproj">
       <Project>{7771ec53-86ef-4fe3-b511-b47a7f5030de}</Project>
       <Name>CZBK.ItcastProject.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="20180426\" />
     <Folder Include="ImageUpload\" />
   </ItemGroup>
   <PropertyGroup>
