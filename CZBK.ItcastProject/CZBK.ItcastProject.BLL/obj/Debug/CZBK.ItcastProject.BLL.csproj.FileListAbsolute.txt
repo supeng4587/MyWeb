@@ -9,5 +9,3 @@ D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.BLL\bin\Debug\CZBK.ItcastProj
 D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.BLL\bin\Debug\CZBK.ItcastProject.DAL.pdb
 D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.BLL\bin\Debug\CZBK.ItcastProject.Model.pdb
 D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.BLL\bin\Debug\CZBK.ItcastProject.Common.pdb
-D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.BLL\obj\Debug\CZBK.ItcastProject.BLL.csproj.CoreCompileInputs.cache
-D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.BLL\obj\Debug\CZBK.ItcastProject.BLL.csproj.CopyComplete

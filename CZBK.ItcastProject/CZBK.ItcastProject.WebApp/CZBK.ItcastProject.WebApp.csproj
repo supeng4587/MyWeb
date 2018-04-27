@@ -127,6 +127,7 @@
     <Content Include="20180424\ImageUpLoad.ashx" />
     <Content Include="20180424\ImageDetail.ashx" />
     <Content Include="20180424\ImageUpdate.ashx" />
+    <Content Include="20180426\ValidateImageCode.ashx" />
     <None Include="Properties\PublishProfiles\MyWeb.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -162,6 +163,9 @@
     </Compile>
     <Compile Include="20180424\Thumb.ashx.cs">
       <DependentUpon>Thumb.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="20180426\ValidateImageCode.ashx.cs">
+      <DependentUpon>ValidateImageCode.ashx</DependentUpon>
     </Compile>
     <Compile Include="AddUser.ashx.cs">
       <DependentUpon>AddUser.ashx</DependentUpon>
@@ -201,7 +205,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="20180426\" />
     <Folder Include="ImageUpload\" />
   </ItemGroup>
   <PropertyGroup>
