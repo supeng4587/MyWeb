@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="../CSS/tableStyle.css" rel="stylesheet" />
+    <script src="../JS/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#captcha").click(function () {
+                $("#captchaImage").attr("src", "ValidateImageCode.ashx?captchaTime=" + new Date().getMilliseconds());
+            })
+        })
+    </script>
+</head>
+<body>
+    <form method="post" action="">
+        <table>
+            <tr><th colspan="2"></th></tr>
+            <tr><td>用户</td><td><input type="text" name="txtUser" /></td></tr>
+            <tr><td>密码</td><td><input type="password" name="txtPwd" /></td></tr>
+            <tr><td>验证码</td><td><input type="text" name="txtCaptcha" /></td></tr>
+            <tr><td><a href="javascript:void(0)" id="captcha">看不清</a></td><td><img src="ValidateImageCode.ashx" id="captchaImage"/></td></tr>
+            <tr><td colspan="3" align="center"><input type="submit" value="提交" /></td></tr>
+        </table>
+    </form>
+</body>
+</html>

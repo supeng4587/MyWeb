@@ -102,6 +102,9 @@
     <Content Include="20180424\ImageUpdate.html" />
     <Content Include="20180424\ImageUpLoad.html" />
     <Content Include="20180424\Thumb.html" />
+    <Content Include="20180426\Login.html" />
+    <Content Include="20180428\UserDetailWebForm.aspx" />
+    <Content Include="20180428\UserInfoWebForm.aspx" />
     <Content Include="AddUserInfo.html" />
     <Content Include="CSS\tableStyle.css" />
     <Content Include="Error.html" />
@@ -128,6 +131,7 @@
     <Content Include="20180424\ImageDetail.ashx" />
     <Content Include="20180424\ImageUpdate.ashx" />
     <Content Include="20180426\ValidateImageCode.ashx" />
+    <Content Include="20180428\UserDelete.ashx" />
     <None Include="Properties\PublishProfiles\MyWeb.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -166,6 +170,23 @@
     </Compile>
     <Compile Include="20180426\ValidateImageCode.ashx.cs">
       <DependentUpon>ValidateImageCode.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="20180428\UserDelete.ashx.cs">
+      <DependentUpon>UserDelete.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="20180428\UserDetailWebForm.aspx.cs">
+      <DependentUpon>UserDetailWebForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="20180428\UserDetailWebForm.aspx.designer.cs">
+      <DependentUpon>UserDetailWebForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="20180428\UserInfoWebForm.aspx.cs">
+      <DependentUpon>UserInfoWebForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="20180428\UserInfoWebForm.aspx.designer.cs">
+      <DependentUpon>UserInfoWebForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="AddUser.ashx.cs">
       <DependentUpon>AddUser.ashx</DependentUpon>
