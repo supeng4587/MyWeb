@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserDetailWebForm.aspx.cs" Inherits="CZBK.ItcastProject.WebApp._20180428.UserDetailWebForm" %>
+<%@ Import Namespace="CZBK.ItcastProject.Model" %>
 
 <!DOCTYPE html>
 
@@ -18,27 +19,27 @@
         </tr>
         <tr>
             <td>ID:</td>
-            <td>$ID</td>
+            <td><%=userInfo.ID %></td>
         </tr>
         <tr>
             <td>UserName：</td>
-            <td>$UserName</td>
+            <td><%=userInfo.UserName %></td>
         </tr>
         <tr>
             <td>UserPass:</td>
-            <td>$UserPass</td>
+            <td><%=userInfo.UserPass %></td>
         </tr>
         <tr>
             <td>Email:</td>
-            <td>$Email</td>
+            <td><%=userInfo.Email %></td>
         </tr>
         <tr>
             <td>RegTime:</td>
-            <td>$RegTime</td>
+            <td><%=userInfo.RegTime %></td>
         </tr>
         <tr>
             <td colspan="2" >
-                <a href="UserInfoList.ashx">Back</a>
+                <a href="UserInfoWebForm.aspx">Back</a>
             </td>
         </tr>
     </table>

@@ -20,11 +20,11 @@ namespace CZBK.ItcastProject.WebApp._20180428
                 BLL.UserInfoService userInfoService = new BLL.UserInfoService();
                 if (userInfoService.Delete(id))
                 {
-                    context.Response.Redirect("UserInfoList.ashx");
+                    context.Response.Redirect("UserInfoWebForm.aspx");
                 }
                 else
                 {
-                    context.Response.Redirect("Error.html");
+                    context.Response.Redirect("/Error.html");
                 }
             }
             else

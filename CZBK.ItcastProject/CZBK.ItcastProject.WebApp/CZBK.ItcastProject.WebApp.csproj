@@ -104,7 +104,9 @@
     <Content Include="20180424\Thumb.html" />
     <Content Include="20180426\Login.html" />
     <Content Include="20180428\UserDetailWebForm.aspx" />
+    <Content Include="20180428\UserInfoAdd.aspx" />
     <Content Include="20180428\UserInfoWebForm.aspx" />
+    <Content Include="20180428\UserUpdate.aspx" />
     <Content Include="AddUserInfo.html" />
     <Content Include="CSS\tableStyle.css" />
     <Content Include="Error.html" />
@@ -181,12 +183,26 @@
     <Compile Include="20180428\UserDetailWebForm.aspx.designer.cs">
       <DependentUpon>UserDetailWebForm.aspx</DependentUpon>
     </Compile>
+    <Compile Include="20180428\UserInfoAdd.aspx.cs">
+      <DependentUpon>UserInfoAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="20180428\UserInfoAdd.aspx.designer.cs">
+      <DependentUpon>UserInfoAdd.aspx</DependentUpon>
+    </Compile>
     <Compile Include="20180428\UserInfoWebForm.aspx.cs">
       <DependentUpon>UserInfoWebForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="20180428\UserInfoWebForm.aspx.designer.cs">
       <DependentUpon>UserInfoWebForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="20180428\UserUpdate.aspx.cs">
+      <DependentUpon>UserUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="20180428\UserUpdate.aspx.designer.cs">
+      <DependentUpon>UserUpdate.aspx</DependentUpon>
     </Compile>
     <Compile Include="AddUser.ashx.cs">
       <DependentUpon>AddUser.ashx</DependentUpon>

@@ -14,7 +14,7 @@
         function rowDelete(username, id) {
             id = parseInt(id);
             if (confirm("are you sure delete it:\u000d\u000d" + username)) {
-                $(location).attr('href', '/UserDelete.ashx?id=' + id)
+                $(location).attr('href', 'UserDelete.ashx?id=' + id)
             }
         }
     </script>
@@ -22,6 +22,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <a href="UserInfoAdd.aspx">Add User</a>
             <table>
                 <tr>
                     <th>ID</th>
@@ -43,7 +44,7 @@
                     <td><%=userInfo.RegTime %></td>
                     <td><a href="UserDetailWebForm.aspx?ID=<%=userInfo.ID %>">Detail</a></td>
                     <td><a href="javascript:void(0)" onclick="rowDelete('<%=userInfo.UserName %>','<%=userInfo.ID %>')">Delete</a></td>
-                    <td><a href="UpdateUserDetail.ashx?id=<%=userInfo.ID %>">Update</a></td>
+                    <td><a href="UserUpdate.aspx?id=<%=userInfo.ID %>">Update</a></td>
                 </tr>
                 <%}
                 %>
