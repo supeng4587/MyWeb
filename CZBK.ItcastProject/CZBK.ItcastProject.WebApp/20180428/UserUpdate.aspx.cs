@@ -10,12 +10,22 @@ namespace CZBK.ItcastProject.WebApp._20180428
 {
     public partial class UserUpdate : System.Web.UI.Page
     {
-        public UserInfo UserInfo { get; set; }
+        public UserInfo userInfoHtml { get; set; }
+        UserInfo userInfo = new UserInfo();
         BLL.UserInfoService userInfoService = new BLL.UserInfoService();
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            if (Context.Request.Form["IsPostBack"] == null)
+            {
+                GetUserInfo();
+            }
+            else
+            {
+                UpdateUserInfo();
+            }
         }
 
         public void GetUserInfo()
@@ -23,7 +33,16 @@ namespace CZBK.ItcastProject.WebApp._20180428
             int id;
             if (int.TryParse(Context.Request.QueryString["ID"], out id))
             {
-                UserInfo = userInfoService.GetList(id); ;
+                userInfo = userInfoService.GetList(id);
+                if (userInfo != null)
+                {
+                    userInfoHtml = userInfo;
+                }
+                else
+                {
+                    Context.Response.Redirect("/Error.html");
+                }
+
             }
             else
             {
@@ -33,13 +52,13 @@ namespace CZBK.ItcastProject.WebApp._20180428
 
         public void UpdateUserInfo()
         {
-            UserInfo.ID = int.Parse(Context.Request.Form["ID"]);
-            UserInfo.UserName = Context.Request.Form["txtUserName"];
-            UserInfo.UserPass = Context.Request.Form["passUserPass"];
-            UserInfo.Email = Context.Request.Form["txtEmail"];
-            UserInfo.RegTime = DateTime.Parse(Context.Request.Form["RegTime"]);
+            userInfo.ID = int.Parse(Context.Request.Form["ID"]);
+            userInfo.UserName = Context.Request.Form["txtUserName"];
+            userInfo.UserPass = Context.Request.Form["passUserPass"];
+            userInfo.Email = Context.Request.Form["txtEmail"];
+            userInfo.RegTime = DateTime.Parse(Context.Request.Form["RegTime"]);
 
-            if (userInfoService.Update(UserInfo))
+            if (userInfoService.Update(userInfo))
             {
                 Context.Response.Redirect("UserInfoWebForm.aspx");
             }

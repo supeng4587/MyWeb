@@ -19,23 +19,23 @@
             </tr>
             <tr>
                 <td>ID:</td>
-                <td><%=UserInfo.ID %><input type="hidden" name="ID" value="<%=UserInfo.ID %>" /></td>
+                <td><%=userInfoHtml.ID %><input type="hidden" name="ID" value="<%=userInfoHtml.ID %>" /></td>
             </tr>
             <tr>
                 <td>UserName：</td>
-                <td><input type="text" name="txtUserName" value="<%=UserInfo.UserName %>" /></td>
+                <td><input type="text" name="txtUserName" value="<%=userInfoHtml.UserName %>" /></td>
             </tr>
             <tr>
                 <td>UserPass:</td>
-                <td><input type="password" name="passUserPass" value="<%=UserInfo.UserPass %>" /></td>
+                <td><input type="password" name="passUserPass" value="<%=userInfoHtml.UserPass %>" /></td>
             </tr>
             <tr>
                 <td>Email:</td>
-                <td><input type="text" name="txtEmail" value="<%=UserInfo.Email %>" /></td>
+                <td><input type="text" name="txtEmail" value="<%=userInfoHtml.Email %>" /></td>
             </tr>
             <tr>
                 <td>RegTime:</td>
-                <td><%=UserInfo.RegTime %><input type="hidden" name="RegTime" value="<%=UserInfo.RegTime %>" /></td>
+                <td><%=userInfoHtml.RegTime %><input type="hidden" name="RegTime" value="<%=userInfoHtml.RegTime %>" /></td>
             </tr>
             <tr><td colspan="2"><input type="submit" value="Submit" /></td></tr>
         </table>
