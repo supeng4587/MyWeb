@@ -108,6 +108,7 @@
     <Content Include="20180428\UserInfoWebForm.aspx" />
     <Content Include="20180428\UserUpdate.aspx" />
     <Content Include="20180503\NewsList.aspx" />
+    <Content Include="20180503\NumberPageCodeNewsList.aspx" />
     <Content Include="20180503\WebDemos\flash\main_fla.swf" />
     <Content Include="20180503\WebDemos\flash\sub_fla.swf" />
     <Content Include="20180503\WebDemos\Html\News.html" />
@@ -152,7 +153,12 @@
     <Content Include="20180503\WebDemos\style\CommonStyle.css" />
     <Content Include="20180503\WebDemos\style\pageStyle.css" />
     <Content Include="20180503\WebDemos\style\style.css" />
+    <Content Include="20180504\Child.aspx" />
+    <Content Include="20180504\ServerDemo.aspx" />
+    <Content Include="20180504\ShowUrl.html" />
+    <Content Include="20180504\UrlReferrer.aspx" />
     <Content Include="AddUserInfo.html" />
+    <Content Include="CSS\pageStyle.css" />
     <Content Include="CSS\tableStyle.css" />
     <Content Include="Error.html" />
     <Content Include="index.html" />
@@ -256,6 +262,34 @@
     </Compile>
     <Compile Include="20180503\NewsList.aspx.designer.cs">
       <DependentUpon>NewsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="20180503\NumberPageCodeNewsList.aspx.cs">
+      <DependentUpon>NumberPageCodeNewsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="20180503\NumberPageCodeNewsList.aspx.designer.cs">
+      <DependentUpon>NumberPageCodeNewsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="20180504\Child.aspx.cs">
+      <DependentUpon>Child.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="20180504\Child.aspx.designer.cs">
+      <DependentUpon>Child.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="20180504\ServerDemo.aspx.cs">
+      <DependentUpon>ServerDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="20180504\ServerDemo.aspx.designer.cs">
+      <DependentUpon>ServerDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="20180504\UrlReferrer.aspx.cs">
+      <DependentUpon>UrlReferrer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="20180504\UrlReferrer.aspx.designer.cs">
+      <DependentUpon>UrlReferrer.aspx</DependentUpon>
     </Compile>
     <Compile Include="AddUser.ashx.cs">
       <DependentUpon>AddUser.ashx</DependentUpon>
