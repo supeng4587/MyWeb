@@ -47,5 +47,22 @@ namespace CZBK.ItcastProject.Common
                 }
             }
         }
+
+        public static object ExecuteScalar(string sql, CommandType type, params SqlParameter[] pars)
+        {
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                {
+                    if (pars != null)
+                    {
+                        cmd.Parameters.AddRange(pars);
+                    }
+                    cmd.CommandType = type;
+                    conn.Open();
+                    return cmd.ExecuteScalar();
+                }
+            }
+        }
     }
 }

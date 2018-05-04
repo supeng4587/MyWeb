@@ -51,9 +51,39 @@ namespace CZBK.ItcastProject.DAL
                 userInfo.UserName = dt.Rows[0]["UserName"] != DBNull.Value ? dt.Rows[0]["UserName"].ToString() : string.Empty;
                 userInfo.UserPass = dt.Rows[0]["UserPass"] != DBNull.Value ? dt.Rows[0]["UserPass"].ToString() : string.Empty;
                 userInfo.Email = dt.Rows[0]["Email"] != DBNull.Value ? dt.Rows[0]["Email"].ToString() : string.Empty;
-                userInfo.RegTime = dt.Rows[0]["RegTime"] != DBNull.Value ? DateTime.Parse(dt.Rows[0]["RegTime"].ToString()) : DateTime.MinValue; 
+                userInfo.RegTime = dt.Rows[0]["RegTime"] != DBNull.Value ? DateTime.Parse(dt.Rows[0]["RegTime"].ToString()) : DateTime.MinValue;
             }
             return userInfo;
+        }
+
+        /// <summary>
+        /// 分页取指定范围内的数据
+        /// </summary>
+        /// <param name="startIndex"></param>
+        /// <param name="endIndex"></param>
+        /// <returns></returns>
+        public List<UserInfo> GetList(int startIndex, int endIndex)
+        {
+            string sql = "SELECT * FROM (SELECT  UserInfo.ID,UserInfo.UserName,UserInfo.UserPass,UserInfo.Email,UserInfo.RegTime,ROW_NUMBER() OVER(ORDER BY ID DESC) AS number FROM UserInfo) t WHERE t.number >= @startIndex AND t.number <=@endIndex ORDER BY t.number; ";
+
+            SqlParameter[] ps = { new SqlParameter("@startIndex", SqlDbType.Int), new SqlParameter("@endIndex", SqlDbType.Int) };
+            ps[0].Value = startIndex;
+            ps[1].Value = endIndex;
+
+            DataTable dt = SqlHelper.GetDataTable(sql, CommandType.Text, ps);
+            List<UserInfo> list = null;
+            if (dt.Rows.Count > 0)
+            {
+                list = new List<UserInfo>();
+                UserInfo userInfo = null;
+                foreach (DataRow row in dt.Rows)
+                {
+                    userInfo = new UserInfo();
+                    LoadEntity(userInfo, row);
+                    list.Add(userInfo);
+                }
+            }
+            return list;
         }
 
         public int CreatUserInfo(UserInfo userInfo)
@@ -70,7 +100,7 @@ namespace CZBK.ItcastProject.DAL
             pars[2].Value = userInfo.Email;
             pars[3].Value = userInfo.RegTime;
 
-            return SqlHelper.ExecuteNonQuery(sql,CommandType.Text,pars);
+            return SqlHelper.ExecuteNonQuery(sql, CommandType.Text, pars);
         }
 
         public int DeleteUserInfo(int id)
@@ -78,7 +108,7 @@ namespace CZBK.ItcastProject.DAL
             string sql = "DELETE FROM dbo.UserInfo WHERE ID = @id";
             SqlParameter par = new SqlParameter("@id", SqlDbType.Int);
             par.Value = id;
-            return SqlHelper.ExecuteNonQuery(sql,CommandType.Text,par);
+            return SqlHelper.ExecuteNonQuery(sql, CommandType.Text, par);
         }
 
         public int UpdateUserInfo(UserInfo userInfo)
@@ -95,7 +125,18 @@ namespace CZBK.ItcastProject.DAL
             pars[1].Value = userInfo.UserName;
             pars[2].Value = userInfo.UserPass;
             pars[3].Value = userInfo.Email;
-            return SqlHelper.ExecuteNonQuery(sql,CommandType.Text,pars);
+            return SqlHelper.ExecuteNonQuery(sql, CommandType.Text, pars);
+        }
+
+        public int GetRecordCount()
+        {
+            string sql = "SELECT COUNT(1) FROM UserInfo";
+            int count;
+            if(!int.TryParse(SqlHelper.ExecuteScalar(sql,CommandType.Text).ToString(),out count))
+            {
+                count = 1;
+            }
+            return count;
         }
 
         /// <summary>
