@@ -157,6 +157,7 @@
     <Content Include="20180504\ServerDemo.aspx" />
     <Content Include="20180504\ShowUrl.html" />
     <Content Include="20180504\UrlReferrer.aspx" />
+    <Content Include="20180504\ViewStateDome.aspx" />
     <Content Include="AddUserInfo.html" />
     <Content Include="CSS\pageStyle.css" />
     <Content Include="CSS\tableStyle.css" />
@@ -290,6 +291,13 @@
     </Compile>
     <Compile Include="20180504\UrlReferrer.aspx.designer.cs">
       <DependentUpon>UrlReferrer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="20180504\ViewStateDome.aspx.cs">
+      <DependentUpon>ViewStateDome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="20180504\ViewStateDome.aspx.designer.cs">
+      <DependentUpon>ViewStateDome.aspx</DependentUpon>
     </Compile>
     <Compile Include="AddUser.ashx.cs">
       <DependentUpon>AddUser.ashx</DependentUpon>
