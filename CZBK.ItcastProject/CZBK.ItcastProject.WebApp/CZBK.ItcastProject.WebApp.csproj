@@ -158,6 +158,9 @@
     <Content Include="20180504\ShowUrl.html" />
     <Content Include="20180504\UrlReferrer.aspx" />
     <Content Include="20180504\ViewStateDome.aspx" />
+    <Content Include="20180510\CookieDemo.aspx" />
+    <Content Include="20180510\CookieDemo2.aspx" />
+    <Content Include="20180510\UserLoginCookie.aspx" />
     <Content Include="AddUserInfo.html" />
     <Content Include="CSS\pageStyle.css" />
     <Content Include="CSS\tableStyle.css" />
@@ -298,6 +301,27 @@
     </Compile>
     <Compile Include="20180504\ViewStateDome.aspx.designer.cs">
       <DependentUpon>ViewStateDome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="20180510\CookieDemo.aspx.cs">
+      <DependentUpon>CookieDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="20180510\CookieDemo.aspx.designer.cs">
+      <DependentUpon>CookieDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="20180510\CookieDemo2.aspx.cs">
+      <DependentUpon>CookieDemo2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="20180510\CookieDemo2.aspx.designer.cs">
+      <DependentUpon>CookieDemo2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="20180510\UserLoginCookie.aspx.cs">
+      <DependentUpon>UserLoginCookie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="20180510\UserLoginCookie.aspx.designer.cs">
+      <DependentUpon>UserLoginCookie.aspx</DependentUpon>
     </Compile>
     <Compile Include="AddUser.ashx.cs">
       <DependentUpon>AddUser.ashx</DependentUpon>
