@@ -76,5 +76,36 @@ namespace CZBK.ItcastProject.BLL
             int pageCount = Convert.ToInt32(Math.Ceiling((double)recordCount / pageSiza));
             return pageCount;
         }
+
+        /// <summary>
+        /// 完成用户登陆检验并返回用户和信息
+        /// </summary>
+        /// <param name="userName">用户名</param>
+        /// <param name="userPass">用户密码</param>
+        /// <param name="msg">返回信息 string</param>
+        /// <param name="userInfo">返回用户 UserInfo</param>
+        /// <returns></returns>
+        public bool ValidateUserInfo(string userName, string userPass, out string msg, out UserInfo userInfo)
+        {
+            bool isSucess = false;
+            userInfo = userInfoDal.GetList(userName);
+            if (userInfo != null)
+            {
+                if (userInfo.UserPass == userPass)
+                {
+                    msg = "登陆成功。";
+                    isSucess = true;
+                }
+                else
+                {
+                    msg = "用户名或密码错误。";
+                }
+            }
+            else
+            {
+                msg = "无此用户。";
+            }
+            return isSucess;
+        }
     }
 }

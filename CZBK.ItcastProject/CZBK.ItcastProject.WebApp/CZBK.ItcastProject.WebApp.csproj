@@ -161,6 +161,19 @@
     <Content Include="20180510\CookieDemo.aspx" />
     <Content Include="20180510\CookieDemo2.aspx" />
     <Content Include="20180510\UserLoginCookie.aspx" />
+    <Content Include="20180511\SeeeionDemo.aspx" />
+    <Content Include="20180511\Test.aspx" />
+    <Content Include="20180511\UserInfoList.aspx" />
+    <Content Include="20180511\UserLogin.aspx" />
+    <Content Include="20180511\网站管理后台登录_files\login_bg.jpg" />
+    <Content Include="20180511\网站管理后台登录_files\login_img.jpg" />
+    <Content Include="20180511\网站管理后台登录_files\login_leftbg.jpg" />
+    <Content Include="20180511\网站管理后台登录_files\login_line.jpg" />
+    <Content Include="20180511\网站管理后台登录_files\login_menu2.jpg" />
+    <Content Include="20180511\网站管理后台登录_files\login_rigbg.jpg" />
+    <Content Include="20180511\网站管理后台登录_files\login_tit.jpg" />
+    <Content Include="20180511\网站管理后台登录_files\style.css" />
+    <Content Include="20180511\网站管理后台登录_files\ValidateCode.aspx" />
     <Content Include="AddUserInfo.html" />
     <Content Include="CSS\pageStyle.css" />
     <Content Include="CSS\tableStyle.css" />
@@ -190,6 +203,7 @@
     <Content Include="20180426\ValidateImageCode.ashx" />
     <Content Include="20180428\UserDelete.ashx" />
     <Content Include="20180503\WebDemos\Images\vssver2.scc" />
+    <Content Include="20180511\captcha.ashx" />
     <None Include="Properties\PublishProfiles\MyWeb.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -322,6 +336,37 @@
     </Compile>
     <Compile Include="20180510\UserLoginCookie.aspx.designer.cs">
       <DependentUpon>UserLoginCookie.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="20180511\captcha.ashx.cs">
+      <DependentUpon>captcha.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="20180511\SeeeionDemo.aspx.cs">
+      <DependentUpon>SeeeionDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="20180511\SeeeionDemo.aspx.designer.cs">
+      <DependentUpon>SeeeionDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="20180511\Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="20180511\Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="20180511\UserInfoList.aspx.cs">
+      <DependentUpon>UserInfoList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="20180511\UserInfoList.aspx.designer.cs">
+      <DependentUpon>UserInfoList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="20180511\UserLogin.aspx.cs">
+      <DependentUpon>UserLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="20180511\UserLogin.aspx.designer.cs">
+      <DependentUpon>UserLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="AddUser.ashx.cs">
       <DependentUpon>AddUser.ashx</DependentUpon>

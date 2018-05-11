@@ -34,6 +34,11 @@ namespace CZBK.ItcastProject.WebApp._20180510
             Response.Cookies["cp4"].Value = "cp4";
             Response.Cookies["cp4"].Expires = DateTime.Now.AddDays(3);
             Response.Cookies["cp4"].Path = "/20180510";
+
+            HttpCookie cookie1 = new HttpCookie("cp5");
+            cookie1.Value = Server.UrlEncode("我是老五");
+            cookie1.Expires = DateTime.Now.AddDays(3);
+            Response.Cookies.Add(cookie1);
         }
     }
 }

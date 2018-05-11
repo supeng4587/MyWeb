@@ -14,16 +14,19 @@ namespace CZBK.ItcastProject.WebApp._20180510
         {
             if (IsPostBack)
             {
-                string userName = Request.Form["txtUserName"];
+                string postUserName = Request.Form["txtUserName"];
                 //写cookie
-                Response.Cookies["userName"].Value = userName;
+                Response.Cookies["userName"].Value = Server.UrlEncode(postUserName);
                 Response.Cookies["userName"].Expires = DateTime.Now.AddDays(3);
             }
             else
             {
                 if (Request.Cookies["userName"] != null)
                 {
-                    loginUserName = Request.Cookies["userName"].Value;
+                    string getUserName = Server.UrlDecode(Request.Cookies["userName"].Value);
+                    loginUserName = getUserName;
+                    Response.Cookies["userName"].Value = Server.UrlEncode(getUserName);
+                    Response.Cookies["userName"].Expires = DateTime.Now.AddDays(3);
                 }
             }
         }

@@ -57,6 +57,28 @@ namespace CZBK.ItcastProject.DAL
         }
 
         /// <summary>
+        /// 获取用户，按用户名
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <returns></returns>
+        public UserInfo GetList(string userName)
+        {
+            string sql = "SELECT UserInfo.ID,UserInfo.UserName,UserInfo.UserPass,UserInfo.Email,UserInfo.RegTime FROM UserInfo WHERE UserInfo.UserName = @userName";
+            sql = sql.Replace("@userName", userName.ToString());
+            DataTable dt = SqlHelper.GetDataTable(sql, CommandType.Text);
+            UserInfo userInfo = new UserInfo();
+            if (dt.Rows.Count > 0)
+            {
+                userInfo.ID = int.Parse(dt.Rows[0]["ID"].ToString());
+                userInfo.UserName = dt.Rows[0]["UserName"] != DBNull.Value ? dt.Rows[0]["UserName"].ToString() : string.Empty;
+                userInfo.UserPass = dt.Rows[0]["UserPass"] != DBNull.Value ? dt.Rows[0]["UserPass"].ToString() : string.Empty;
+                userInfo.Email = dt.Rows[0]["Email"] != DBNull.Value ? dt.Rows[0]["Email"].ToString() : string.Empty;
+                userInfo.RegTime = dt.Rows[0]["RegTime"] != DBNull.Value ? DateTime.Parse(dt.Rows[0]["RegTime"].ToString()) : DateTime.MinValue;
+            }
+            return userInfo;
+        }
+
+        /// <summary>
         /// 分页取指定范围内的数据
         /// </summary>
         /// <param name="startIndex"></param>
