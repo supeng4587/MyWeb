@@ -10,6 +10,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <a href="LoginOut.ashx">注销</a>
         </div>
     </form>
 </body>

@@ -210,14 +210,17 @@
                 <tr>
                     <th>验证码</th>
                     <th>
-                        <input type="text" name="captcha" /></th>
+                        <input type="text" name="txtCode" /></th>
                 </tr>
                 <tr>
                     <th><a href="javascript:void(0)" id="changeCaptcha">看不清</a></th>
                     <td>
                         <img src="captcha.ashx" id="captchaImage" alt=""/><span style="font:14px;color:red;"><%=Msg %></span></td>
                 </tr>
-
+                <tr>
+                    <th><input type="checkbox" name="autoLogin" value="auto"/></th>
+                    <td>是否下次自动登陆</td>
+                </tr>
                 <tr>
                     <td colspan="2" style="text-align: center">
                         <input type="submit" value="submit" /></td>

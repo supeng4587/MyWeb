@@ -46,6 +46,16 @@ namespace CZBK.ItcastProject.BLL
         }
 
         /// <summary>
+        /// 按用户名查询
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <returns></returns>
+        public UserInfo GetList(string userName)
+        {
+            return userInfoDal.GetList(userName);
+        }
+
+        /// <summary>
         /// Create
         /// </summary>
         /// <param name="userInfo"></param>

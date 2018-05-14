@@ -64,8 +64,9 @@ namespace CZBK.ItcastProject.DAL
         public UserInfo GetList(string userName)
         {
             string sql = "SELECT UserInfo.ID,UserInfo.UserName,UserInfo.UserPass,UserInfo.Email,UserInfo.RegTime FROM UserInfo WHERE UserInfo.UserName = @userName";
-            sql = sql.Replace("@userName", userName.ToString());
-            DataTable dt = SqlHelper.GetDataTable(sql, CommandType.Text);
+            SqlParameter p = new SqlParameter("@userName", SqlDbType.NVarChar,64);
+            p.Value = userName;
+            DataTable dt = SqlHelper.GetDataTable(sql, CommandType.Text,p);
             UserInfo userInfo = new UserInfo();
             if (dt.Rows.Count > 0)
             {
