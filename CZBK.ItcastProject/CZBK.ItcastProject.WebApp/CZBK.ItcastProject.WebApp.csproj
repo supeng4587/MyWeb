@@ -174,6 +174,11 @@
     <Content Include="20180511\网站管理后台登录_files\login_tit.jpg" />
     <Content Include="20180511\网站管理后台登录_files\style.css" />
     <Content Include="20180511\网站管理后台登录_files\ValidateCode.aspx" />
+    <Content Include="20180515\AjaxDemo.aspx" />
+    <Content Include="20180515\AjaxPostDemo.aspx" />
+    <Content Include="20180515\JqueryAjax.aspx" />
+    <Content Include="20180515\LoginAjax.html" />
+    <Content Include="20180515\Register.aspx" />
     <Content Include="AddUserInfo.html" />
     <Content Include="CSS\pageStyle.css" />
     <Content Include="CSS\tableStyle.css" />
@@ -205,6 +210,9 @@
     <Content Include="20180503\WebDemos\Images\vssver2.scc" />
     <Content Include="20180511\captcha.ashx" />
     <Content Include="20180511\LoginOut.ashx" />
+    <Content Include="20180515\GetDate.ashx" />
+    <Content Include="20180515\CheckUserName.ashx" />
+    <Content Include="20180515\UserLogin.ashx" />
     <None Include="Properties\PublishProfiles\MyWeb.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -371,6 +379,43 @@
     </Compile>
     <Compile Include="20180511\UserLogin.aspx.designer.cs">
       <DependentUpon>UserLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="20180515\AjaxDemo.aspx.cs">
+      <DependentUpon>AjaxDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="20180515\AjaxDemo.aspx.designer.cs">
+      <DependentUpon>AjaxDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="20180515\AjaxPostDemo.aspx.cs">
+      <DependentUpon>AjaxPostDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="20180515\AjaxPostDemo.aspx.designer.cs">
+      <DependentUpon>AjaxPostDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="20180515\CheckUserName.ashx.cs">
+      <DependentUpon>CheckUserName.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="20180515\GetDate.ashx.cs">
+      <DependentUpon>GetDate.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="20180515\JqueryAjax.aspx.cs">
+      <DependentUpon>JqueryAjax.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="20180515\JqueryAjax.aspx.designer.cs">
+      <DependentUpon>JqueryAjax.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="20180515\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="20180515\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="20180515\UserLogin.ashx.cs">
+      <DependentUpon>UserLogin.ashx</DependentUpon>
     </Compile>
     <Compile Include="AddUser.ashx.cs">
       <DependentUpon>AddUser.ashx</DependentUpon>

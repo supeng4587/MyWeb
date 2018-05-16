@@ -44,9 +44,10 @@ namespace CZBK.ItcastProject.DAL
             string sql = "SELECT UserInfo.ID,UserInfo.UserName,UserInfo.UserPass,UserInfo.Email,UserInfo.RegTime FROM UserInfo WHERE UserInfo.ID = @id ORDER BY ID DESC";
             sql = sql.Replace("@id", id.ToString());
             DataTable dt = SqlHelper.GetDataTable(sql, CommandType.Text);
-            UserInfo userInfo = new UserInfo();
+            UserInfo userInfo = null;//声明对象的时候先定义为null，这样在可以那返回的对象直接使用==null进行比较。
             if (dt.Rows.Count > 0)
             {
+                userInfo = new UserInfo();
                 userInfo.ID = int.Parse(dt.Rows[0]["ID"].ToString());
                 userInfo.UserName = dt.Rows[0]["UserName"] != DBNull.Value ? dt.Rows[0]["UserName"].ToString() : string.Empty;
                 userInfo.UserPass = dt.Rows[0]["UserPass"] != DBNull.Value ? dt.Rows[0]["UserPass"].ToString() : string.Empty;
@@ -67,9 +68,10 @@ namespace CZBK.ItcastProject.DAL
             SqlParameter p = new SqlParameter("@userName", SqlDbType.NVarChar,64);
             p.Value = userName;
             DataTable dt = SqlHelper.GetDataTable(sql, CommandType.Text,p);
-            UserInfo userInfo = new UserInfo();
+            UserInfo userInfo = null;
             if (dt.Rows.Count > 0)
             {
+                userInfo = new UserInfo();
                 userInfo.ID = int.Parse(dt.Rows[0]["ID"].ToString());
                 userInfo.UserName = dt.Rows[0]["UserName"] != DBNull.Value ? dt.Rows[0]["UserName"].ToString() : string.Empty;
                 userInfo.UserPass = dt.Rows[0]["UserPass"] != DBNull.Value ? dt.Rows[0]["UserPass"].ToString() : string.Empty;

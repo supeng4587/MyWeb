@@ -1,0 +1,87 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="../CSS/tableStyle.css" rel="stylesheet" />
+    <script src="../JS/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript">
+        $("#msgSpan").css("display", "none");
+        $(function () {
+            $("#changeCaptcha").click(function () {
+                $("#captchaImage").attr("src", "/20180511/captcha.ashx?datetime=" + new Date().getMilliseconds());
+            })//验证码图片刷新
+
+            $("#btnLogin").click(function () {
+                userLogin();
+            });
+        });
+
+        function userLogin() {
+            var userName = $("#userName").val();
+            var userPass = $("#userPass").val();
+            if (userName != "" && userPass != "") {
+                $.ajax({
+                    type: "POST",
+                    url: "UserLogin.ashx",
+                    data: "userName=" + userName + "&userPass=" + userPass,
+                    success: function (data) {
+                        var serverData = data.split(":");
+                        if (serverData[0] == "ok") {
+                            window.location.href = "/20180511/UserInfoList.aspx";
+                        } else {
+                            $("#userName").val("");
+                            $("#userPass").val("");
+                            $("#msgSpan").text(serverData[1]);
+                        }
+                    }
+                });
+            } else {
+                $("#msgSpan").css("display", "block");
+                $("#msgSpan").text("用户名和密码不能为空！！！");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <th>用户</th>
+                <th>
+                    <input type="text" name="txtUserName" value="" id="userName" />
+                </th>
+            </tr>
+            <tr>
+                <th>密码</th>
+                <th>
+                    <input type="password" name="txtUserPass" id="userPass" />
+                </th>
+            </tr>
+            <tr>
+                <th>验证码</th>
+                <th>
+                    <input type="text" name="txtCode" />
+                </th>
+            </tr>
+            <tr>
+                <th><a href="javascript:void(0)" id="changeCaptcha">看不清</a></th>
+                <td>
+                    <img src="/20180511/captcha.ashx" id="captchaImage" alt="" /><span style="font:14px;color:red;"></span>
+                </td>
+            </tr>
+            <!--<tr>
+            <th><input type="checkbox" name="autoLogin" value="auto" /></th>
+            <td>Next time auto login</td>
+        </tr>-->
+            <tr>
+                <td colspan="2" style="text-align: center">
+                    <input type="button" value="Login" id="btnLogin" />
+                </td>
+            </tr>
+        </table>
+        <span style="font:14px;color:red;" id="msgSpan"></span>
+    </div>
+</body>
+</html>
