@@ -176,9 +176,11 @@
     <Content Include="20180511\网站管理后台登录_files\ValidateCode.aspx" />
     <Content Include="20180515\AjaxDemo.aspx" />
     <Content Include="20180515\AjaxPostDemo.aspx" />
+    <Content Include="20180515\AjaxRequestAspx.html" />
     <Content Include="20180515\JqueryAjax.aspx" />
     <Content Include="20180515\LoginAjax.html" />
     <Content Include="20180515\Register.aspx" />
+    <Content Include="20180515\RequestAspx.aspx" />
     <Content Include="AddUserInfo.html" />
     <Content Include="CSS\pageStyle.css" />
     <Content Include="CSS\tableStyle.css" />
@@ -413,6 +415,13 @@
     </Compile>
     <Compile Include="20180515\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="20180515\RequestAspx.aspx.cs">
+      <DependentUpon>RequestAspx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="20180515\RequestAspx.aspx.designer.cs">
+      <DependentUpon>RequestAspx.aspx</DependentUpon>
     </Compile>
     <Compile Include="20180515\UserLogin.ashx.cs">
       <DependentUpon>UserLogin.ashx</DependentUpon>
