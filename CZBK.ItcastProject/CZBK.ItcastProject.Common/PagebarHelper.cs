@@ -32,11 +32,11 @@ namespace CZBK.ItcastProject.Common
 
             if (pageIndex > 1)
             {
-                sb.AppendFormat("<a href='NumberPageCodeNewsList.aspx?pageIndex={0}'>前页</a>", pageIndex - 1);
+                sb.AppendFormat("<a href='?pageIndex={0}'>前页</a>", pageIndex - 1);
             }
             else
             {
-                sb.AppendFormat("<a href='NumberPageCodeNewsList.aspx?pageIndex={0}'>前页</a>", 1);
+                sb.AppendFormat("<a href='?pageIndex={0}'>前页</a>", 1);
             }
 
             for (int i = start; i <= end; i++)
@@ -47,17 +47,17 @@ namespace CZBK.ItcastProject.Common
                 }
                 else
                 {
-                    sb.AppendFormat("<a href='NumberPageCodeNewsList.aspx?pageIndex={0}'><span>{0}</span></a>", i);
+                    sb.AppendFormat("<a href='?pageIndex={0}' class='myPageBar'><span>{0}</span></a>", i);
                 }
             }
 
             if (pageIndex != pageCount)
             {
-                sb.AppendFormat("<a href='NumberPageCodeNewsList.aspx?pageIndex={0}'>后页</a>", pageIndex + 1);
+                sb.AppendFormat("<a href='?pageIndex={0} class='myPageBar''>后页</a>", pageIndex + 1);
             }
             else
             {
-                sb.AppendFormat("<a href='NumberPageCodeNewsList.aspx?pageIndex={0}'>后页</a>", pageCount);
+                sb.AppendFormat("<a href='?pageIndex={0} class='myPageBar''>后页</a>", pageCount);
             }
             return sb.ToString();
         }
