@@ -183,6 +183,10 @@
     <Content Include="20180515\RequestAspx.aspx" />
     <Content Include="20180517\JsonDemo.html" />
     <Content Include="20180517\UserInfoList.html" />
+    <Content Include="20180524\DataList.aspx" />
+    <Content Include="20180524\Index.aspx" />
+    <Content Include="20180524\UseRepeater.aspx" />
+    <Content Include="20180524\WebForm1.aspx" />
     <Content Include="AddUserInfo.html" />
     <Content Include="CSS\pageStyle.css" />
     <Content Include="CSS\tableStyle.css" />
@@ -485,6 +489,11 @@
     <Content Include="20180517\GetJson.ashx" />
     <Content Include="20180517\UserList.ashx" />
     <Content Include="20180517\UserDelete.ashx" />
+    <Content Include="20180517\AddUser.ashx" />
+    <Content Include="20180517\EditUser.ashx" />
+    <Content Include="20180517\ShowDetail.ashx" />
+    <Content Include="20180517\ChangeUser.ashx" />
+    <Content Include="20180524\Site1.Master" />
     <None Include="Properties\PublishProfiles\MyWeb.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -696,14 +705,61 @@
     <Compile Include="20180515\UserLogin.ashx.cs">
       <DependentUpon>UserLogin.ashx</DependentUpon>
     </Compile>
+    <Compile Include="20180517\AddUser.ashx.cs">
+      <DependentUpon>AddUser.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="20180517\ChangeUser.ashx.cs">
+      <DependentUpon>ChangeUser.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="20180517\EditUser.ashx.cs">
+      <DependentUpon>EditUser.ashx</DependentUpon>
+    </Compile>
     <Compile Include="20180517\GetJson.ashx.cs">
       <DependentUpon>GetJson.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="20180517\ShowDetail.ashx.cs">
+      <DependentUpon>ShowDetail.ashx</DependentUpon>
     </Compile>
     <Compile Include="20180517\UserDelete.ashx.cs">
       <DependentUpon>UserDelete.ashx</DependentUpon>
     </Compile>
     <Compile Include="20180517\UserList.ashx.cs">
       <DependentUpon>UserList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="20180524\DataList.aspx.cs">
+      <DependentUpon>DataList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="20180524\DataList.aspx.designer.cs">
+      <DependentUpon>DataList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="20180524\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="20180524\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="20180524\Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="20180524\Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="20180524\UseRepeater.aspx.cs">
+      <DependentUpon>UseRepeater.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="20180524\UseRepeater.aspx.designer.cs">
+      <DependentUpon>UseRepeater.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="20180524\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="20180524\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="AddUser.ashx.cs">
       <DependentUpon>AddUser.ashx</DependentUpon>

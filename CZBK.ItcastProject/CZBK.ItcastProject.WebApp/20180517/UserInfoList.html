@@ -15,6 +15,7 @@
         $(function () {
             $("#addUserDiv").css("display", "none");
             $("#detailDiv").css("display", "none");
+            $("#editUserDiv").css("display", "none");
             loadUserInfo(1);
             $("#addUser").click(function () {
                 bindAddUserClick();
@@ -31,7 +32,7 @@
                     var serverData = $.parseJSON(data);
                     var length = serverData.UList.length;
                     for (var i = 0; i < length; i++) {
-                        $("<tr><td>" + serverData.UList[i].ID + "</td><td>" + serverData.UList[i].UserName + "</td><td>" + serverData.UList[i].UserPass + "</td><td>" + serverData.UList[i].Email + "</td><td>" + bindChangeDateFormat(serverData.UList[i].RegTime) + "</td><td>Detail</td><td><a herf='javascript:void(0)' onclick = \"bindDelete('" + serverData.UList[i].UserName + "','" + serverData.UList[i].ID + "')\">Delete</a></td><td>Edit</td></tr>").appendTo("#tabList");
+                        $("<tr><td>" + serverData.UList[i].ID + "</td><td>" + serverData.UList[i].UserName + "</td><td>" + serverData.UList[i].UserPass + "</td><td>" + serverData.UList[i].Email + "</td><td>" + bindChangeDateFormat(serverData.UList[i].RegTime) + "</td><td><a href = 'javascript:void(0)' onclick = \"bindDetail('" + serverData.UList[i].ID + "')\">Detail</a></td><td><a herf='javascript:void(0)' onclick = \"bindDelete('" + serverData.UList[i].UserName + "','" + serverData.UList[i].ID + "')\">Delete</a></td><td><a href='javascript:void(0)' onclick = \"bindEditUser('" + serverData.UList[i].ID + "')\">Edit</a></td></tr>").appendTo("#tabList");
                     }
                     //将页码条绑定在Div上
                     $("#pagebar").html(serverData.MyPageBar);
@@ -88,7 +89,48 @@
                 }
             })
         }
-        //添加用户数据
+        //获取用户在添加表单中和获取的数据ajzx到服务端
+        function addUser() {
+            var pars = $("#addUserForm").serializeArray();
+            $.ajax({
+                url: "AddUser.ashx",
+                type: "POST",
+                data: pars,
+                success: function (data) {
+                    if (data == "ok") {
+                        $("#addUserDiv").dialog("close");
+                        $("#tabList tr:gt(0)").remove();
+                        loadUserInfo();
+                        $("#addUserForm input").val("");
+                        $.messager.alert("prompt", "Success,add new one.", "ok");
+                    } else {
+                        $.messager.alert("prompt", "Create failed", "error");
+                    }
+                }
+            })
+        }
+        //完成数据更新
+        function editUserInfo() {
+            var pars = $("#editUserForm").serializeArray();
+            $.ajax({
+                url: "ChangeUser.ashx",
+                type: "POST",
+                data: pars,
+                success: function (data) {
+                    if (data == "ok") {
+                        $("#editUserDiv").dialog("close");
+                        $("#tabList tr:gt(0)").remove();
+                        loadUserInfo();
+                    } else {
+                        $.messager.alert("prompt", "Update failed", "error");
+                    }
+                }
+            })
+        }
+
+
+        //------------------弹出界面---------------------------
+        //展示添加用户数据界面
         function bindAddUserClick() {
             $("#addUserDiv").css("display", "block");
             $("#addUserDiv").dialog({
@@ -103,7 +145,7 @@
                     text: 'ok',
                     iconcls: 'icon-ok',
                     handler: function () {
-                        alert("ok");
+                        addUser();
                     }
                 }, {
                     text: "Cancel",
@@ -113,10 +155,82 @@
                 }]
             })
         }
-
-
-
-
+        //展示编辑用户数据界面
+        function bindEditUser(userId) {
+            $.ajax({
+                url: "ShowDetail.ashx",
+                type: "POST",
+                data: { "id": userId },
+                success: function (data) {
+                    var serverData = $.parseJSON(data);
+                    $("#editUserID").val(serverData.ID);
+                    $("#editUserName").val(serverData.UserName);
+                    $("#editUserPass").val(serverData.UserPass);
+                    $("#editEmail").val(serverData.Email);
+                    $("#editUserRegTime").val(serverData.RegTime);
+                    $("#editUserDiv").css("display", "block");
+                    $("#editUserDiv").dialog({
+                        width: 300,
+                        height: 300,
+                        title: "Edit the user",
+                        collapsible: true,
+                        maximizable: true,
+                        resizable: true,
+                        modal: true,
+                        buttons: [{
+                            text: 'ok',
+                            iconcls: 'icon-ok',
+                            handler: function () {
+                                editUserInfo();
+                            }
+                        }, {
+                            text: "Cancel",
+                            handler: function () {
+                                $("#editUserDiv").dialog("close");
+                            }
+                        }]
+                    })
+                }
+            })
+        }
+        //展示用户明细
+        function bindDetail(userId) {
+            $.ajax({
+                url: "ShowDetail.ashx",
+                type: "POST",
+                data: { "id": userId },
+                success: function (data) {
+                    var serverData = $.parseJSON(data);
+                    $("#editUserID").val(serverData.ID);
+                    $("#editUserName").val(serverData.UserName);
+                    $("#editUserPass").val(serverData.UserPass);
+                    $("#editEmail").val(serverData.Email);
+                    $("#editUserRegTime").val(serverData.RegTime);
+                    $("#editUserDiv").css("display", "block");
+                    $("#editUserDiv").dialog({
+                        width: 300,
+                        height: 300,
+                        title: "Edit the user",
+                        collapsible: true,
+                        maximizable: true,
+                        resizable: true,
+                        modal: true,
+                        buttons: [{
+                            text: 'ok',
+                            iconcls: 'icon-ok',
+                            handler: function () {
+                                editUserInfo();
+                            }
+                        }, {
+                            text: "Cancel",
+                            handler: function () {
+                                $("#editUserDiv").dialog("close");
+                            }
+                        }]
+                    })
+                }
+            })
+        }
     </script>
 </head>
 <body>
@@ -136,13 +250,26 @@
     </div>
     <!-- 添加用户信息 -->
     <div id="addUserDiv">
-        <table>
-            <tr><th>Element</th><th>Information</th></tr>
-            <tr><td>UserName：</td><td><input type="text" name="txtUserName" /></td></tr>
-            <tr><td>UserPass:</td><td><input type="password" name="PassUserPass" /></td></tr>
-            <tr><td>Email:</td><td><input type="text" name="txtEmail" /></td></tr>
-            <tr><td colspan="2"><input type="submit" value="Create" /></td></tr>
-        </table>
+        <form id="addUserForm">
+            <table>
+                <tr><th>Element</th><th>Information</th></tr>
+                <tr><td>UserName：</td><td><input type="text" name="txtUserName" /></td></tr>
+                <tr><td>UserPass:</td><td><input type="password" name="PassUserPass" /></td></tr>
+                <tr><td>Email:</td><td><input type="text" name="txtEmail" /></td></tr>
+            </table>
+        </form>
+    </div>
+    <!-----------编辑用户--------------->
+    <div id="editUserDiv">
+        <form id="editUserForm">
+            <input type="hidden" name="txtEditUserID" id="editUserID" />
+            <table>
+                <tr><th>Element</th><th>Information</th></tr>
+                <tr><td>UserName：</td><td><input type="text" name="txtEditUserName" id="editUserName"/></td></tr>
+                <tr><td>UserPass:</td><td><input type="password" name="txtEditUserPass" id="editUserPass"/></td></tr>
+                <tr><td>Email:</td><td><input type="text" name="txtEditEmail" id="editEmail"/></td></tr>
+            </table>
+        </form>
     </div>
 </body>
 </html>
