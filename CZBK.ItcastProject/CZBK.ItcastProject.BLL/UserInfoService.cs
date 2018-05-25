@@ -44,6 +44,10 @@ namespace CZBK.ItcastProject.BLL
         {
             return userInfoDal.GetList(id);
         }
+        public UserInfo GetList(UserInfo userInfo)
+        {
+            return userInfoDal.GetList((int)userInfo.ID);
+        }
 
         /// <summary>
         /// 按用户名查询
@@ -62,6 +66,7 @@ namespace CZBK.ItcastProject.BLL
         /// <returns></returns>
         public bool Create(UserInfo userInfo)
         {
+            userInfo.RegTime = System.DateTime.Now;
             return userInfoDal.CreatUserInfo(userInfo) > 0;
         }
 
@@ -80,11 +85,36 @@ namespace CZBK.ItcastProject.BLL
             return userInfoDal.DeleteUserInfo(id) > 0;
         }
 
+        public bool Delete(UserInfo userInfo)
+        {
+            return userInfoDal.DeleteUserInfo((int)userInfo.ID) > 0;
+        }
+
         public int GetPageCount(int pageSiza)
         {
             int recordCount = userInfoDal.GetRecordCount();
             int pageCount = Convert.ToInt32(Math.Ceiling((double)recordCount / pageSiza));
             return pageCount;
+        }
+
+        /// <summary>
+        /// 获取总记录数
+        /// </summary>
+        /// <returns></returns>
+        public int GetRecoredCount()
+        {
+            return userInfoDal.GetRecordCount();
+        }
+
+        /// <summary>
+        /// 获取ListView的分页数据
+        /// </summary>
+        /// <param name="startRowIndex"></param>
+        /// <param name="maximumRows"></param>
+        /// <returns></returns>
+        public List<UserInfo> GetPageListView(int startRowIndex, int maximumRows)
+        {
+            return userInfoDal.GetPageListView(startRowIndex, maximumRows);
         }
 
         /// <summary>

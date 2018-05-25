@@ -111,6 +111,36 @@ namespace CZBK.ItcastProject.DAL
             return list;
         }
 
+        /// <summary>
+        /// 为ListView获取指定数据
+        /// </summary>
+        /// <param name="startRowIndex"></param>
+        /// <param name="maximumRows"></param>
+        /// <returns></returns>
+        public List<UserInfo> GetPageListView(int startRowIndex,int maximumRows)
+        {
+            string sql = "SELECT * FROM (SELECT  UserInfo.ID,UserInfo.UserName,UserInfo.UserPass,UserInfo.Email,UserInfo.RegTime,ROW_NUMBER() OVER(ORDER BY ID DESC) AS number FROM UserInfo) t WHERE t.number > @startRowIndex AND t.number <=@startRowIndex+@maximumRows; ";
+
+            SqlParameter[] ps = { new SqlParameter("@startRowIndex", SqlDbType.Int), new SqlParameter("@maximumRows", SqlDbType.Int) };
+            ps[0].Value = startRowIndex;
+            ps[1].Value = maximumRows;
+
+            DataTable dt = SqlHelper.GetDataTable(sql, CommandType.Text, ps);
+            List<UserInfo> list = null;
+            if (dt.Rows.Count > 0)
+            {
+                list = new List<UserInfo>();
+                UserInfo userInfo = null;
+                foreach (DataRow row in dt.Rows)
+                {
+                    userInfo = new UserInfo();
+                    LoadEntity(userInfo, row);
+                    list.Add(userInfo);
+                }
+            }
+            return list;
+        }
+
         public int CreatUserInfo(UserInfo userInfo)
         {
             string sql = "INSERT INTO UserInfo ( UserName, UserPass, Email, RegTime ) VALUES  (@UserName,@UserPass,@Email,@RegTime)";
@@ -153,6 +183,10 @@ namespace CZBK.ItcastProject.DAL
             return SqlHelper.ExecuteNonQuery(sql, CommandType.Text, pars);
         }
 
+        /// <summary>
+        /// 获取总记录数
+        /// </summary>
+        /// <returns></returns>
         public int GetRecordCount()
         {
             string sql = "SELECT COUNT(1) FROM UserInfo";

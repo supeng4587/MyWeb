@@ -185,8 +185,10 @@
     <Content Include="20180517\UserInfoList.html" />
     <Content Include="20180524\DataList.aspx" />
     <Content Include="20180524\Index.aspx" />
+    <Content Include="20180524\ListViewDemo.aspx" />
     <Content Include="20180524\UseRepeater.aspx" />
     <Content Include="20180524\WebForm1.aspx" />
+    <Content Include="20180524\WebForm2.aspx" />
     <Content Include="AddUserInfo.html" />
     <Content Include="CSS\pageStyle.css" />
     <Content Include="CSS\tableStyle.css" />
@@ -494,6 +496,7 @@
     <Content Include="20180517\ShowDetail.ashx" />
     <Content Include="20180517\ChangeUser.ashx" />
     <Content Include="20180524\Site1.Master" />
+    <Content Include="20180524\MainMaster.Master" />
     <None Include="Properties\PublishProfiles\MyWeb.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -740,6 +743,20 @@
     <Compile Include="20180524\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="20180524\ListViewDemo.aspx.cs">
+      <DependentUpon>ListViewDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="20180524\ListViewDemo.aspx.designer.cs">
+      <DependentUpon>ListViewDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="20180524\MainMaster.Master.cs">
+      <DependentUpon>MainMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="20180524\MainMaster.Master.designer.cs">
+      <DependentUpon>MainMaster.Master</DependentUpon>
+    </Compile>
     <Compile Include="20180524\Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -760,6 +777,13 @@
     </Compile>
     <Compile Include="20180524\WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="20180524\WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="20180524\WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
     </Compile>
     <Compile Include="AddUser.ashx.cs">
       <DependentUpon>AddUser.ashx</DependentUpon>
