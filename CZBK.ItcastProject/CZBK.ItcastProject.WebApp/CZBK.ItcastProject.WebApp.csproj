@@ -823,6 +823,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="20180528\" />
     <Folder Include="ImageUpload\" />
   </ItemGroup>
   <PropertyGroup>
