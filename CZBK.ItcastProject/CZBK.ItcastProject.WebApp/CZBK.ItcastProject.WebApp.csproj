@@ -189,6 +189,13 @@
     <Content Include="20180524\UseRepeater.aspx" />
     <Content Include="20180524\WebForm1.aspx" />
     <Content Include="20180524\WebForm2.aspx" />
+    <Content Include="20180528\AjaxDemo.aspx" />
+    <Content Include="20180528\CacheDemo.aspx" />
+    <Content Include="20180528\File.txt" />
+    <Content Include="20180528\FileCacheDependency.aspx" />
+    <Content Include="20180528\PageCacheDemo.aspx" />
+    <Content Include="20180528\ShowUserInfoDetail.aspx" />
+    <Content Include="20180528\SqlCacheDep.aspx" />
     <Content Include="AddUserInfo.html" />
     <Content Include="CSS\pageStyle.css" />
     <Content Include="CSS\tableStyle.css" />
@@ -785,6 +792,48 @@
     <Compile Include="20180524\WebForm2.aspx.designer.cs">
       <DependentUpon>WebForm2.aspx</DependentUpon>
     </Compile>
+    <Compile Include="20180528\AjaxDemo.aspx.cs">
+      <DependentUpon>AjaxDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="20180528\AjaxDemo.aspx.designer.cs">
+      <DependentUpon>AjaxDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="20180528\CacheDemo.aspx.cs">
+      <DependentUpon>CacheDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="20180528\CacheDemo.aspx.designer.cs">
+      <DependentUpon>CacheDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="20180528\FileCacheDependency.aspx.cs">
+      <DependentUpon>FileCacheDependency.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="20180528\FileCacheDependency.aspx.designer.cs">
+      <DependentUpon>FileCacheDependency.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="20180528\PageCacheDemo.aspx.cs">
+      <DependentUpon>PageCacheDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="20180528\PageCacheDemo.aspx.designer.cs">
+      <DependentUpon>PageCacheDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="20180528\ShowUserInfoDetail.aspx.cs">
+      <DependentUpon>ShowUserInfoDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="20180528\ShowUserInfoDetail.aspx.designer.cs">
+      <DependentUpon>ShowUserInfoDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="20180528\SqlCacheDep.aspx.cs">
+      <DependentUpon>SqlCacheDep.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="20180528\SqlCacheDep.aspx.designer.cs">
+      <DependentUpon>SqlCacheDep.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AddUser.ashx.cs">
       <DependentUpon>AddUser.ashx</DependentUpon>
     </Compile>
@@ -823,8 +872,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="20180528\" />
     <Folder Include="ImageUpload\" />
+    <Folder Include="logs\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

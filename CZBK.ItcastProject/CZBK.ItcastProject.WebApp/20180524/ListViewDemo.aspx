@@ -164,7 +164,7 @@
                                     <asp:NextPreviousPagerField ButtonType="Button" ShowFirstPageButton="True" ShowLastPageButton="True" />
                                 </Fields>
                             </asp:DataPager>
-        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" DataObjectTypeName="CZBK.ItcastProject.Model.UserInfo" DeleteMethod="Delete" InsertMethod="Create" SelectMethod="GetPageListView" TypeName="CZBK.ItcastProject.BLL.UserInfoService" UpdateMethod="Update" EnablePaging="True" SelectCountMethod="GetRecoredCount"></asp:ObjectDataSource>
+        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" DataObjectTypeName="CZBK.ItcastProject.Model.UserInfo" DeleteMethod="Delete" InsertMethod="Create" SelectMethod="GetPageListView" TypeName="CZBK.ItcastProject.BLL.UserInfoService" UpdateMethod="Update" EnablePaging="True" SelectCountMethod="GetRecoredCount" CacheDuration="60" EnableCaching="True"></asp:ObjectDataSource>
     </div>
     </form>
 </body>
