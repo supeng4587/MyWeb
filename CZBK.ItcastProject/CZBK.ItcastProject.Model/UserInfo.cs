@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace CZBK.ItcastProject.Model
 {
+    [Serializable]
     public class UserInfo
     {
         public int? ID { get; set; }

@@ -194,8 +194,11 @@
     <Content Include="20180528\File.txt" />
     <Content Include="20180528\FileCacheDependency.aspx" />
     <Content Include="20180528\PageCacheDemo.aspx" />
+    <Content Include="20180528\ReadSession.aspx" />
+    <Content Include="20180528\SessionDemo.aspx" />
     <Content Include="20180528\ShowUserInfoDetail.aspx" />
     <Content Include="20180528\SqlCacheDep.aspx" />
+    <Content Include="20180528\TestError.aspx" />
     <Content Include="AddUserInfo.html" />
     <Content Include="CSS\pageStyle.css" />
     <Content Include="CSS\tableStyle.css" />
@@ -463,6 +466,9 @@
     <Content Include="CSS\themes\metro\validatebox.css" />
     <Content Include="CSS\themes\metro\window.css" />
     <Content Include="Error.html" />
+    <Content Include="error\FileNotFound.html" />
+    <Content Include="error\MyErrorPage.aspx" />
+    <Content Include="error\NoAccess.html" />
     <Content Include="index.html" />
     <Content Include="JS\easyui-lang-zh_CN.js" />
     <Content Include="JS\jquery-1.7.1.min.js" />
@@ -820,6 +826,20 @@
     <Compile Include="20180528\PageCacheDemo.aspx.designer.cs">
       <DependentUpon>PageCacheDemo.aspx</DependentUpon>
     </Compile>
+    <Compile Include="20180528\ReadSession.aspx.cs">
+      <DependentUpon>ReadSession.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="20180528\ReadSession.aspx.designer.cs">
+      <DependentUpon>ReadSession.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="20180528\SessionDemo.aspx.cs">
+      <DependentUpon>SessionDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="20180528\SessionDemo.aspx.designer.cs">
+      <DependentUpon>SessionDemo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="20180528\ShowUserInfoDetail.aspx.cs">
       <DependentUpon>ShowUserInfoDetail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -834,11 +854,25 @@
     <Compile Include="20180528\SqlCacheDep.aspx.designer.cs">
       <DependentUpon>SqlCacheDep.aspx</DependentUpon>
     </Compile>
+    <Compile Include="20180528\TestError.aspx.cs">
+      <DependentUpon>TestError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="20180528\TestError.aspx.designer.cs">
+      <DependentUpon>TestError.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AddUser.ashx.cs">
       <DependentUpon>AddUser.ashx</DependentUpon>
     </Compile>
     <Compile Include="Deleteuser.ashx.cs">
       <DependentUpon>Deleteuser.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="error\MyErrorPage.aspx.cs">
+      <DependentUpon>MyErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="error\MyErrorPage.aspx.designer.cs">
+      <DependentUpon>MyErrorPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="MakeImage.ashx.cs">
       <DependentUpon>MakeImage.ashx</DependentUpon>
