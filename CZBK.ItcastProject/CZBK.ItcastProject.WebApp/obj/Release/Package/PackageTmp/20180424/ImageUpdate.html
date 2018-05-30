@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="../CSS/tableStyle.css" rel="stylesheet" />
+    <title></title>
+</head>
+<body>
+    <form method="post" action="ImageInfoChange.ashx">
+        <table>
+            <tr><th>Element</th><th>Value</th></tr>
+            <tr><td>ID</td><td>$ID<input type="hidden" name="hiddenID" value="$ID" /></td></tr>
+            <tr><td>OriginalName</td><td>$OriginalName<input type="hidden" name="txtOriginalName" value="$OriginalName" /></td></tr>
+            <tr><td>Path</td><td><input type="text" name="txtPath" value="$Path" /><input type="hidden" name="txtPathOriginal" value="$Path" /></td></tr>
+            <tr><td>GuidName</td><td><input type="text" name="txtGuidName" value="$GuidName" /><input type="hidden" name="txtGuidNameOriginal" value="$GuidName" /></td></tr>
+            <tr><td>Exetension</td><td><input type="text" name="txtExetension" value="$Exetension" /></td></tr>
+            <tr><td>ThumbName</td><td><input type="text" name="txtThumbName" value="$ThumbName" /><input type="hidden" name="txtThumbNameOriginal" value="$ThumbName" /></td></tr>
+            <tr><td>Size</td><td>$Size<input type="hidden" name="Size" value="$Size" /></td></tr>
+            <tr><td>CreateTime</td><td>$CreateTime<input type="hidden" name="CreateTime" value="$CreateTime" /></td></tr>
+            <tr><th colspan="2"><input type="submit" value="Submit" /></th></tr>
+        </table>
+    </form>
+</body>
+</html>

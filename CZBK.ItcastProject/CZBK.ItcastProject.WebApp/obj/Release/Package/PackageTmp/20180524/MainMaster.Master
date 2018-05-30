@@ -1,0 +1,58 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MainMaster.master.cs" Inherits="CZBK.ItcastProject.WebApp._20180524.MainMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script src="../JS/jquery-1.7.1.min.js"></script>
+    <script src="../JS/jquery.easyui.min.js"></script>
+    <script src="../JS/easyui-lang-zh_CN.js"></script>
+    <script type="text/javascript">
+        function publicShow() {
+
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table style="width: 100%; background-color:forestgreen">
+                <tr>
+                    <td>首页</td>
+                    <td>我的相册</td>
+                    <td>我的文档</td>
+                    <td>我的电脑</td>
+                </tr>
+            </table>
+            <hr />
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <table style="width: 100%;background-color:forestgreen">
+                <tr>
+                    <td>
+                        <div class="footer-main-top">
+
+                            <a href="http://zxjg.saic.gov.cn/saicmrktout/" target="_blank">国家工商总局直销行业管理</a> | <a href="http://zxgl.mofcom.gov.cn/pages/corp/CorpProdSelectList,S10408665-4.html" target="_blank">商务部直销行业管理信息系统</a> | <a href="about.php?cid=28&pid=3" target="_blank">联系我们</a> | <a href="about.php?cid=49&pid=3" target="_blank">隐私政策</a> | <a href="about.php?cid=51&pid=3" target="_blank">版权声明</a> | <a href="http://dangjian.people.com.cn/fg/" target="_blank">非公企业党建</a>
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="footer-main-top">
+                            版权为天狮集团所有，未经允许不得转载或链接，津ICP备 B2-20080185-4
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="../JS/jquery-1.7.1.min.js"></script>
+	<meta charset="utf-8" />
+    <script type="text/javascript">
+        $(function () {
+            $("#btnData").click(function () {
+                $.ajax({
+                    url: "GetJson.ashx",
+                    type: "POST",
+                    data: {},
+                    dataType:"json",
+                    success: function (data) {
+                        alert("用户名是："+data.name);
+                    }
+                })
+            })
+
+            $("#btnData1").click(function () {
+                $.ajax({
+                    url: "GetJson.ashx",
+                    type: "POST",
+                    data: {},
+                    success: function (data) {
+                        var serverData = $.parseJSON(data);
+                        alert(serverData.name);
+                    }
+                })
+            })
+
+            $("#btnData2").click(function () {
+                $.getJSON("GetJson.ashx", {}, function (data) {
+                    alert(data.name);
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <input type="button" id="btnData" value="获取数据" />
+    <input type="button" id="btnData1" value="获取数据parseJson" />
+    <input type="button" id="btnData2" value="获取数据getJson" />
+</body>
+</html>

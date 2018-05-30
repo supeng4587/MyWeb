@@ -200,6 +200,7 @@
     <Content Include="20180528\SqlCacheDep.aspx" />
     <Content Include="20180528\TestError.aspx" />
     <Content Include="AddUserInfo.html" />
+    <Content Include="Admin\AddPreoduct.aspx" />
     <Content Include="CSS\pageStyle.css" />
     <Content Include="CSS\tableStyle.css" />
     <Content Include="CSS\themes\black\accordion.css" />
@@ -469,6 +470,7 @@
     <Content Include="error\FileNotFound.html" />
     <Content Include="error\MyErrorPage.aspx" />
     <Content Include="error\NoAccess.html" />
+    <Content Include="Global.asax" />
     <Content Include="index.html" />
     <Content Include="JS\easyui-lang-zh_CN.js" />
     <Content Include="JS\jquery-1.7.1.min.js" />
@@ -864,6 +866,13 @@
     <Compile Include="AddUser.ashx.cs">
       <DependentUpon>AddUser.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\AddPreoduct.aspx.cs">
+      <DependentUpon>AddPreoduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddPreoduct.aspx.designer.cs">
+      <DependentUpon>AddPreoduct.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Deleteuser.ashx.cs">
       <DependentUpon>Deleteuser.ashx</DependentUpon>
     </Compile>
@@ -873,6 +882,9 @@
     </Compile>
     <Compile Include="error\MyErrorPage.aspx.designer.cs">
       <DependentUpon>MyErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="MakeImage.ashx.cs">
       <DependentUpon>MakeImage.ashx</DependentUpon>

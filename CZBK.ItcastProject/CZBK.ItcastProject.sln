@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CZBK.ItcastProject.Common",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CZBK.ItcastProject.WebApp", "CZBK.ItcastProject.WebApp\CZBK.ItcastProject.WebApp.csproj", "{CC953A3E-D844-458C-9069-EAA859E8B703}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CZBK.ItcastProject.demo", "CZBK.ItcastProject.demo\CZBK.ItcastProject.demo.csproj", "{104376A6-ED2F-484B-98E0-E3B098A84BF3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,7 @@ Global
 		{35C2AC26-0FE5-4BA1-ADA9-D6EC7FAF6D22}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7AB820F3-D18C-44AA-A6FB-393244FC2BF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7AB820F3-D18C-44AA-A6FB-393244FC2BF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AB820F3-D18C-44AA-A6FB-393244FC2BF3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{7AB820F3-D18C-44AA-A6FB-393244FC2BF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AB820F3-D18C-44AA-A6FB-393244FC2BF3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7771EC53-86EF-4FE3-B511-B47A7F5030DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -39,6 +42,10 @@ Global
 		{CC953A3E-D844-458C-9069-EAA859E8B703}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC953A3E-D844-458C-9069-EAA859E8B703}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC953A3E-D844-458C-9069-EAA859E8B703}.Release|Any CPU.Build.0 = Release|Any CPU
+		{104376A6-ED2F-484B-98E0-E3B098A84BF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{104376A6-ED2F-484B-98E0-E3B098A84BF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{104376A6-ED2F-484B-98E0-E3B098A84BF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{104376A6-ED2F-484B-98E0-E3B098A84BF3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

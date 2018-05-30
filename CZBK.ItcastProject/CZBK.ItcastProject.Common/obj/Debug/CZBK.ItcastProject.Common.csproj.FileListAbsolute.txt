@@ -2,4 +2,4 @@ D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.Common\bin\Debug\CZBK.ItcastP
 D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.Common\bin\Debug\CZBK.ItcastProject.Common.pdb
 D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.Common\obj\Debug\CZBK.ItcastProject.Common.dll
 D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.Common\obj\Debug\CZBK.ItcastProject.Common.pdb
-D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.Common\obj\Debug\CZBK.ItcastProject.Common.csproj.CoreCompileInputs.cache
+D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.Common\obj\Debug\CZBK.ItcastProject.Common.csprojResolveAssemblyReference.cache

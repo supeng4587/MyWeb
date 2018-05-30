@@ -1,0 +1,6 @@
+D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.demo\bin\Debug\CZBK.ItcastProject.demo.exe.config
+D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.demo\bin\Debug\CZBK.ItcastProject.demo.exe
+D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.demo\bin\Debug\CZBK.ItcastProject.demo.pdb
+D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.demo\obj\Debug\CZBK.ItcastProject.demo.csprojResolveAssemblyReference.cache
+D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.demo\obj\Debug\CZBK.ItcastProject.demo.exe
+D:\git\MyWeb\CZBK.ItcastProject\CZBK.ItcastProject.demo\obj\Debug\CZBK.ItcastProject.demo.pdb
